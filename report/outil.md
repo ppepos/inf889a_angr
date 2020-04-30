@@ -7,9 +7,9 @@ bibliography: outil.bib
 # Introduction
 
 L'outil choisi pour la présente étude est `angr`. C'est une suite d'outils et
-de librairies qui vise tnat l'automatisation de l'exploitation de programmes
+de librairies qui vise tant l'automatisation de l'exploitation de programmes
 binaires que l'assistance à l'analyse manuelle. Afin de bien comprendre
-l'outil, on presentera le milieu dans lequel vit `angr` et à d'où viennent les
+l'outil, on presentera le milieu dans lequel vit `angr` et d'où viennent les
 problématiques qui sont adressés. On detaillera ensuite ce que l'outil tente
 d'accomplir. On survolera également les limites d'un outil comme `angr`. Nous
 explorerons ensuite comment utiliser `angr` pour accomplir certaines tâches.
@@ -20,9 +20,9 @@ explorerons ensuite comment utiliser `angr` pour accomplir certaines tâches.
 d'exploitation automatique de programmes binaires. On cherche donc à analyser
 des programmes binaires, en langage machine, et donc sans le code source.
 Analyser un programme en langage machine induit plusieurs complexités
-additionnelles par rapport à analyser un programme dont on à accès au code
+additionnelles comparativement à analyser un programme dont on à accès au code
 source. Par exemple, l'identification des octets de donnée par rapport aux
-octets de code, les informations de types n'est plus présente, et bien
+octets de code, les informations de types ne sont plus présentes, et bien
 d'autres.
 
 Aussi, la compétition ayant un accent sur l'exploitation automatique, `angr`
@@ -52,9 +52,9 @@ une base de connaissance à l'interne qui permet de traîner de l'information su
 le programme analysé et de la rendre disponible à chaque analyse ou à un
 analyste utilisant son API.
 
-De plus, `angr` expose des services pour interagir ou questionner avec un
-executable binaire comme une abstraction du chargeur dynamique ou des fonctions
-utilitaires pour trouver les adresses des fonctions, extraire des métadonnées
+De plus, `angr` expose des services pour interagir avec ou questionner un
+exécutable binaire comme une abstraction du chargeur dynamique ou des fonctions
+utilitaires pour trouver des adresses de fonctions, extraire des métadonnées
 ou des symboles, etc.
 
 Dans plusieurs des analyses d'`angr`, il est requis de faire appel à un solveur
@@ -88,13 +88,13 @@ généralement simulées dans `angr`. En quelque sorte, c'est un avantage car on
 peut maintenant analyser une partie de leur comportement, mais cette
 simplification induit très certainement de l'erreur dans certains cas
 d'utilisation de ces procédures. Aussi, certaines procédures ne sont tout
-simplement pas encore implémentés en version simulée (il est toujours possible
-de le faire en tant qu'analyste). Les appels systèmes sont un bon exemple de
+simplement pas encore implémentées en version simulées (il est toujours possible
+de le faire en tant qu'analyste). Les appels système sont de bons exemples de
 ces situations.
 
 # Méthodologie et exploration
 
-Afin de démontrer l'exploration qui a été faite de l'outil, on montre quatres
+Afin de démontrer l'exploration qui a été faite de l'outil, on montre quatre
 exemples disponibles dans le dépôt de code associé à cette recherche
 [@noauthor_ppeposinf889a_angr_nodate]. Les exemples couvrent la construction de graphes de flots de
 contrôle, l'exploration automatique de programmes, l'ajout de contraintes
@@ -135,7 +135,7 @@ Le moteur et cadriciel d'analyse de programme binaires qu'est `angr` est
 impressionnant par son efficacité et sa flexibilité. Il est possible
 d'accomplir ou d'accélérer l'analyse de programmes binaires de plusieurs façons
 en l'utilisant. L'option de modéliser les états exploitables des programmes via
-des contraintes sur la mémoire et les registres pi de chercher à résoudre ces
+des contraintes sur la mémoire et les registres puis de chercher à résoudre ces
 états est particulièrement intéressant.  Par contren, bien qu'à l'avant-garde
 de la recherche dans le milieu de l'exploitation automatique de programmes
 binaires, `angr` est susceptible de souffrir des limitations habituelles des
